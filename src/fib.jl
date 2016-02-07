@@ -30,7 +30,7 @@ for i in 1:20
 	start_time = get_time(start)
 	stop_time = get_time(stop)
 	run_time = (Float64(stop_time) - Float64(start_time))
-	print("$run_time milliseconds\n")
+	## print("$run_time milliseconds\n")
 	total_time = total_time + run_time
 	loops = i
 end

@@ -24,11 +24,13 @@ case $1 in
 
     python3 fib.py >> $output_file
 
-    ruby fib.rb >> $output_file;;
+    ruby fib.rb >> $output_file
+    echo "Core tests executed successfully!";;
 
   "extend")
     python3 fib_cython3.py >> $output_file
     python3 fib_pyrust.py >> $output_file
     python3 fib_inverted.py >> $output_file
-    ruby fib_rbrust.rb >> $output_file;;
+    ruby fib_rbrust.rb >> $output_file
+    echo "Extended tests executed successfully!";;
 esac
