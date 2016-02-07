@@ -19,6 +19,8 @@ case $1 in
 
     go run fib.go >> $output_file
 
+    node fib.js >> $output_file
+
     python3 fib.py >> $output_file
 
     ruby fib.rb >> $output_file;;
