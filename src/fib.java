@@ -12,7 +12,7 @@ public class fib {
         double avg_time;
         long total_time, run_time, counter;
         total_time = 0;
-        for (counter = 0; counter < 10; counter++) {
+        for (counter = 0; counter < 20; counter++) {
             start = System.nanoTime();
             actual = thefibber(test_num);
             stop = System.nanoTime();
@@ -21,6 +21,9 @@ public class fib {
             total_time = total_time + run_time;
         }
         avg_time = total_time / counter;
-        System.out.println("Lang:Java,Result:" + actual + ",Runtime:" + avg_time/(double)1E9);
+        System.out.println("Lang:Java,Result:" + actual +
+                           "TotalTime:" + total_time +
+                           "Loops:" + counter +
+                           ",Runtime:" + avg_time/(double)1E9);
     }
 }

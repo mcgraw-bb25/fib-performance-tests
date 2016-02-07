@@ -10,7 +10,7 @@ main () {
     int actual;
     clock_t start, stop;
     double avg_time, total_time, counter, time_in_clock_ticks, time_in_seconds;
-    for (counter = 0; counter < 10; counter++) {
+    for (counter = 0; counter < 20; counter++) {
         start = clock();
         actual = fib(test_num);
         stop = clock();
@@ -20,5 +20,5 @@ main () {
         total_time = total_time + time_in_seconds;
     }
     avg_time = total_time / (counter);
-    printf("Lang:C(Clang-3.5),Result:%d,Runtime:%f\n", actual, avg_time);
+    printf("Lang:C(Clang-3.5),Result:%d,TotalTime:%f,Loops:%f,Runtime:%f\n", actual, total_time, counter, avg_time);
 }
