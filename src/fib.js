@@ -8,15 +8,15 @@ var total_time = 0.0;
 var actual = 0;
 var t = Date.now();
 
-for (var i = 0; i < 10; i++){
+for (var i = 0; i < 20; i++){
 	t = Date.now();
 	actual = fib(test_n);
 	t = Date.now() - t;
 	total_time = total_time + t;
 }
-var avg_time = (total_time/1000)/10.0;
-var output = "Lang:JavaScript(Node),Result:";
-output = output.concat(actual);
-output = output.concat(",Runtime:");
-output = output.concat(avg_time);
+var avg_time = (total_time/1000)/i;
+var output = "Lang:JavaScript(Node),Result:".concat(actual);
+output = output.concat(",TotalTime:").concat(total_time);
+output = output.concat(",Loops:").concat(i);
+output = output.concat(",Runtime:").concat(avg_time);
 console.log(output);

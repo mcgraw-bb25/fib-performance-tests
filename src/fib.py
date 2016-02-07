@@ -8,11 +8,11 @@ def julia_fib(n):
 if __name__ == "__main__":
     test_n = 35
     total_time = 0.0
-    for i in range(0,10):
+    for i in range(0,20):
         t = time.time()
         actual = julia_fib(test_n)
         t = time.time()-t
         ## print(t)
         total_time = total_time + t
-    avg_time = total_time / 10.0
-    print ("Lang:Python3(Native),Result:%s,Runtime:%s" % (actual,avg_time))
+    avg_time = total_time / ((i + 1) * 1.0)
+    print ("Lang:Python3(Native),Result:%s,TotalTime:%s,Loops:%s,Runtime:%s" % (actual,total_time,i,avg_time))
