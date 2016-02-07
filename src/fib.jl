@@ -22,18 +22,19 @@ end
 
 actual = 0
 total_time = 0
-
-for i in 1:10
+loops = 0
+for i in 1:20
 	start = now()
 	actual = fib(35)
 	stop = now()
 	start_time = get_time(start)
 	stop_time = get_time(stop)
 	run_time = (Float64(stop_time) - Float64(start_time))
-	## print("$run_time milliseconds\n")
+	print("$run_time milliseconds\n")
 	total_time = total_time + run_time
+	loops = i
 end
 
-avg_time = (total_time / 1000) / 10
+avg_time = (total_time / 1000) / loops
 
-print("Lang:Julia,Result:$actual,Runtime:$avg_time\n")
+print("Lang:Julia,Result:$actual,TotalTime:$total_time,Loops:$loops,Runtime:$avg_time\n")
