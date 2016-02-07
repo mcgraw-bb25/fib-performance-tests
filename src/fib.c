@@ -16,7 +16,7 @@ main () {
         stop = clock();
         time_in_clock_ticks = stop-start;
         time_in_seconds = (double)time_in_clock_ticks / (double)CLOCKS_PER_SEC;
-        printf("%f\n", time_in_seconds);
+        // printf("%f\n", time_in_seconds);
         total_time = total_time + time_in_seconds;
     }
     avg_time = total_time / (counter);

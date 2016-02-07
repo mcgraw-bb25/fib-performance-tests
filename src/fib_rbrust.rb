@@ -3,7 +3,7 @@ require "ffi"
 
 module Fib
 	extend FFI::Library
-	ffi_lib "rust_ext/libfib_lib.so"
+	ffi_lib "lib/rust_ext/libfib_lib.so"
 	attach_function :fib, [ :int ], :int
 end
 
@@ -14,7 +14,7 @@ actual = 0
     t = Time.new.to_f
     actual = Fib.fib(test_n)
     t = Time.new.to_f - t
-    puts "#{t}"
+    ## puts "#{t}"
     total_time = total_time + t
 end
 avg_time = total_time / 10.0

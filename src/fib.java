@@ -17,7 +17,7 @@ public class fib {
             actual = thefibber(test_num);
             stop = System.nanoTime();
             run_time = stop - start;
-            System.out.println(run_time + " nanoseconds");
+            // System.out.println(run_time + " nanoseconds");
             total_time = total_time + run_time;
         }
         avg_time = total_time / counter;

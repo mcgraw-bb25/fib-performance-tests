@@ -25,7 +25,7 @@ if __name__ == "__main__":
         t = time.time()
         actual = memoizer(cache, test_n)
         t = time.time()-t
-        print(t)
+        ## print(t)
         total_time = total_time + t
     avg_time = total_time / 10.0
-    print ("Lang:Python3,Result:%s,Runtime:%s" % (actual,avg_time))
+    print ("Lang:Python3(Inverted),Result:%s,Runtime:%s" % (actual,avg_time))

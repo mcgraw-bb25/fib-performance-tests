@@ -14,7 +14,7 @@ actual = 0
     t = Time.new.to_f
     actual = fib(test_n)
     t = Time.new.to_f - t
-    puts "#{t}"
+    ## puts "#{t}"
     total_time = total_time + t
 end
 avg_time = total_time / 10.0

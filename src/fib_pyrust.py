@@ -1,7 +1,7 @@
 import time
 from ctypes import cdll
 
-lib = cdll.LoadLibrary("rust_ext/libfib_lib.so")
+lib = cdll.LoadLibrary("lib/rust_ext/libfib_lib.so")
 
 if __name__ == "__main__":
     test_n = 35
@@ -10,7 +10,7 @@ if __name__ == "__main__":
         t = time.time()
         actual = lib.fib(test_n)
         t = time.time()-t
-        print(t)
+        ## print(t)
         total_time = total_time + t
     avg_time = total_time / 10.0
     print ("Lang:rustyPython3,Result:%s,Runtime:%s" % (actual,avg_time))
