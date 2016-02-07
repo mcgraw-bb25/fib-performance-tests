@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 output_file=test_output
